@@ -30,6 +30,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__cp} -r framework/* %{buildroot}/%{_datadir}/%{name}/
 %{__mkdir} -p %{buildroot}/%{_bindir}
 ln -s ../..%{_datadir}/%{name}/yiic %{buildroot}/%{_bindir}/yiic
+%{__mkdir} -p %{buildroot}/%{_datadir}/php
+ln -s ../../%{_datadir}/%{name}/yii.php %{buildroot}/%{_datadir}/php/yii.php
+ln -s ../../%{_datadir}/%{name}/yiilite.php %{buildroot}/%{_datadir}/php/yiilite.php
 
 %clean
 rm -rf %{buildroot}
@@ -38,6 +41,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %doc CHANGELOG LICENSE README UPGRADE
 %{_datadir}/%{name}
+%{_datadir}/php
 %{_bindir}/yiic
 
 %changelog
