@@ -10,7 +10,7 @@ URL:            http://www.yiiframework.com
 Source0:        http://yii.googlecode.com/files/yii-%{version}.%{svnrevision}.tar.gz
 
 BuildArch:      noarch
-BuildRequires:  tar, gzip
+BuildRequires:  tar, gzip, findutils
 Requires:       php-common >= 5.1.0, php-pdo
 Provides:       yii = %{version}-%{release}
 
@@ -32,8 +32,11 @@ rm -rf $RPM_BUILD_ROOT
 %{__mkdir} -p %{buildroot}/%{_bindir}
 ln -s ../..%{_datadir}/%{name}/yiic %{buildroot}/%{_bindir}/yiic
 %{__mkdir} -p %{buildroot}/%{_datadir}/php
-ln -s ../../%{_datadir}/%{name}/yii.php %{buildroot}/%{_datadir}/php/yii.php
-ln -s ../../%{_datadir}/%{name}/yiilite.php %{buildroot}/%{_datadir}/php/yiilite.php
+ln -s ../..%{_datadir}/%{name}/yii.php %{buildroot}/%{_datadir}/php/yii.php
+ln -s ../..%{_datadir}/%{name}/yiilite.php %{buildroot}/%{_datadir}/php/yiilite.php
+%{__rm} %{buildroot}/%{_datadir}/%{name}/yiic.bat
+
+find %{buildroot}/%{_datadir}/%{name} -name .yii -exec rm {} \;
 
 %clean
 rm -rf %{buildroot}
