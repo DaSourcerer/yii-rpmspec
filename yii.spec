@@ -2,7 +2,7 @@
 
 Name:           yii
 Version:        1.1.10
-Release:        0.1%{?dist}
+Release:        0.2%{?dist}
 Summary:        The Yii PHP framework
 
 License:        BSD
@@ -49,5 +49,8 @@ rm -rf %{buildroot}
 %{_bindir}/yiic
 
 %changelog
+ * Wed Mar 21 2012 Da:Sourcerer <webmaster@dasourcerer.net> - 1.1.10-0.2
+ - Minor tweaks
+
  * Tue Mar 20 2012 Da:Sourcerer <webmaster@dasourcerer.net> - 1.1.10-0.1
  - Initial spec
