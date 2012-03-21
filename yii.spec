@@ -15,7 +15,8 @@ Requires:       php-common >= 5.1.0, php-pdo
 Provides:       yii = %{version}-%{release}
 
 %description
-Yii is a high-performance component-based PHP framework best for developing Web 2.0 applications
+A high-performance component-based PHP framework best for developing Web 2.0
+applications
 
 %prep
 %setup -qn yii-%{version}.%{svnrevision}
