@@ -12,7 +12,6 @@ Source0:        http://yii.googlecode.com/files/yii-%{version}.%{svnrevision}.ta
 BuildArch:      noarch
 BuildRequires:  tar, gzip, findutils
 Requires:       php-common >= 5.1.0, php-pdo
-Provides:       yii = %{version}-%{release}
 
 %description
 A high-performance component-based PHP framework best for developing Web 2.0
