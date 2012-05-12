@@ -1,4 +1,4 @@
-%define         svnrevision r3566
+%define         releasehash 233985
 
 Name:           yii
 Version:        1.1.10
@@ -7,7 +7,7 @@ Summary:        The Yii PHP framework
 
 License:        BSD
 URL:            http://www.yiiframework.com
-Source0:        http://yii.googlecode.com/files/yii-%{version}.%{svnrevision}.tar.gz
+Source0:        https://github.com/yiisoft/yii/tarball/%{version}
 
 BuildArch:      noarch
 BuildRequires:  tar, gzip, findutils
@@ -18,7 +18,7 @@ A high-performance component-based PHP framework best for developing Web 2.0
 applications
 
 %prep
-%setup -qn yii-%{version}.%{svnrevision}
+%setup -qn yiisoft-yii-%{releasehash}b
 
 
 %build
