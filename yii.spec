@@ -1,4 +1,4 @@
-%define         releasehash 233985
+%define         releasehash 65d4892
 
 Name:           yii
 Version:        1.1.10
@@ -18,7 +18,7 @@ A high-performance component-based PHP framework best for developing Web 2.0
 applications
 
 %prep
-%setup -qn yiisoft-yii-%{releasehash}b
+%setup -qn yiisoft-yii-%{releasehash}
 
 
 %build
@@ -44,6 +44,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %doc CHANGELOG LICENSE README UPGRADE
 %{_datadir}/%{name}
+%exclude %{_datadir}/%{name}/gii
 %{_datadir}/php
 
 %package devel
