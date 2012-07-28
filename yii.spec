@@ -2,7 +2,7 @@
 
 Name:           yii
 Version:        1.1.10
-Release:        0.2%{?dist}
+Release:        0.3%{?dist}
 Summary:        The Yii PHP framework
 
 License:        BSD
@@ -53,7 +53,7 @@ Summary:        The Yii development files
 Requires:       yii
 
 %description devel
-This package holds the Yii development files, including the yiic commandline
+This package holds the Yii development files, including the yiic command-line
 utility and the gii module.
 
 %files devel
@@ -62,6 +62,10 @@ utility and the gii module.
 %{_datadir}/%{name}/gii
 
 %changelog
+ * Sat Jul 28 2012 Da:Sourcerer <webmaster@dasourcerer.net> - 1.1.10-0.3
+ - Split development files into their own devel package
+ - Removed remaining test files
+
  * Wed Mar 21 2012 Da:Sourcerer <webmaster@dasourcerer.net> - 1.1.10-0.2
  - Minor tweaks
 
