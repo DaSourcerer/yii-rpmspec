@@ -34,6 +34,7 @@ ln -s ../..%{_datadir}/%{name}/yiic %{buildroot}/%{_bindir}/yiic
 ln -s ../../..%{_datadir}/%{name}/yii.php %{buildroot}/%{_datadir}/php/yii.php
 ln -s ../../..%{_datadir}/%{name}/yiilite.php %{buildroot}/%{_datadir}/php/yiilite.php
 %{__rm} %{buildroot}/%{_datadir}/%{name}/yiic.bat
+%{__rm} -rf %{buildroot}/%{_datadir}/%{name}/test
 
 find %{buildroot}/%{_datadir}/%{name} -name .yii -exec rm {} \;
 
