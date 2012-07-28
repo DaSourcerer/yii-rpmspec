@@ -45,7 +45,19 @@ rm -rf %{buildroot}
 %doc CHANGELOG LICENSE README UPGRADE
 %{_datadir}/%{name}
 %{_datadir}/php
+
+%package devel
+Summary:        The Yii development files
+Requires:       yii
+
+%description devel
+This package holds the Yii development files, including the yiic commandline
+utility and the gii module.
+
+%files devel
+%{_datadir}/%{name}/yiic
 %{_bindir}/yiic
+%{_datadir}/%{name}/gii
 
 %changelog
  * Wed Mar 21 2012 Da:Sourcerer <webmaster@dasourcerer.net> - 1.1.10-0.2
