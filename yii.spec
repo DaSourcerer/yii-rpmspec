@@ -1,13 +1,13 @@
-%define         releasehash 65d4892
+%define         releasehash f0fee9
 
 Name:           yii
-Version:        1.1.10
+Version:        1.1.14
 Release:        0.3%{?dist}
 Summary:        The Yii PHP framework
 
 License:        BSD
 URL:            http://www.yiiframework.com
-Source0:        https://github.com/yiisoft/yii/tarball/%{version}
+Source0:        https://github.com/yiisoft/yii/releases/download/%{version}/yii-%{version}.%{releasehash}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  tar, gzip, findutils
@@ -62,6 +62,9 @@ utility and the gii module.
 %{_datadir}/%{name}/gii
 
 %changelog
+ * Tue Feb 4 2014 Da:Sourcerer <webmaster@dasourcerer.net> - 1.1.14-0.3
+ - Bumped to v1.1.14
+
  * Sat Jul 28 2012 Da:Sourcerer <webmaster@dasourcerer.net> - 1.1.10-0.3
  - Split development files into their own devel package
  - Removed remaining test files
