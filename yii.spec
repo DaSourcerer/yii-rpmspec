@@ -18,7 +18,7 @@ A high-performance component-based PHP framework best for developing Web 2.0
 applications
 
 %prep
-%setup -qn yiisoft-yii-%{releasehash}
+%setup -qn yii-%{version}.%{releasehash}
 
 
 %build
